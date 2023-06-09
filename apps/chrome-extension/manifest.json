@@ -11,7 +11,21 @@
   "content_scripts": [
    {
      "matches": ["https://*/*", "https://blank.org/*"],
-     "js": ["content-script/src/main.tsx"]
+     "js": ["kindle-online/src/main.tsx"]
+   }
+ ],
+ "web_accessible_resources": [
+   {
+     "resources": [
+       "assets/fonts/Inter/regular.otf",
+       "assets/fonts/Inter/medium.otf",
+       "assets/fonts/Inter/bold.otf",
+       "assets/fonts/Inter/black.otf"
+     ],
+     "matches": [
+       "https://*/*",
+       "https://blank.org/*"
+     ]
    }
  ]
 }

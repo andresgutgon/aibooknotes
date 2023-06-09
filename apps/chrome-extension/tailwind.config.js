@@ -1,12 +1,4 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./content-script/index.html",
-    "./content-script/src/**/*.{ts,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
+const preset = require('tailwind-config/tailwind.config.js')
+
+module.exports = { presets: [preset] }
 
