@@ -8,9 +8,17 @@
     "48": "public/icons/icon-48.png",
     "128": "public/icons/icon-128.png"
   },
+  "permissions": ["activeTab", "scripting"],
   "content_scripts": [
    {
-     "matches": ["https://*/*", "https://blank.org/*"],
+     "matches": [
+       "https://leer.amazon.es/notebook*",
+       "https://read.amazon.com/notebook*",
+       "https://read.amazon.co.uk/notebook*",
+       "https://lire.amazon.fr/notebook*",
+       "https://lesen.amazon.de/notebook*",
+       "https://blank.org/*"
+     ],
      "js": ["kindle-online/src/main.tsx"]
    }
  ],
@@ -23,7 +31,11 @@
        "assets/fonts/Inter/black.otf"
      ],
      "matches": [
-       "https://*/*",
+       "https://leer.amazon.es/*",
+       "https://read.amazon.com/*",
+       "https://read.amazon.co.uk/*",
+       "https://lire.amazon.fr/*",
+       "https://lesen.amazon.de/*",
        "https://blank.org/*"
      ]
    }
