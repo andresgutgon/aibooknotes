@@ -2,5 +2,42 @@
   "manifest_version": 3,
   "name": "AI Book Notes",
   "version": "1.0.0",
-  "action": { "default_popup": "index.html" }
+  "icons": {
+    "16": "public/icons/icon-16.png",
+    "32": "public/icons/icon-32.png",
+    "48": "public/icons/icon-48.png",
+    "128": "public/icons/icon-128.png"
+  },
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+   {
+     "matches": [
+       "https://leer.amazon.es/notebook*",
+       "https://read.amazon.com/notebook*",
+       "https://read.amazon.co.uk/notebook*",
+       "https://lire.amazon.fr/notebook*",
+       "https://lesen.amazon.de/notebook*",
+       "https://blank.org/*"
+     ],
+     "js": ["kindle-online/src/main.tsx"]
+   }
+ ],
+ "web_accessible_resources": [
+   {
+     "resources": [
+       "assets/fonts/Inter/regular.otf",
+       "assets/fonts/Inter/medium.otf",
+       "assets/fonts/Inter/bold.otf",
+       "assets/fonts/Inter/black.otf"
+     ],
+     "matches": [
+       "https://leer.amazon.es/*",
+       "https://read.amazon.com/*",
+       "https://read.amazon.co.uk/*",
+       "https://lire.amazon.fr/*",
+       "https://lesen.amazon.de/*",
+       "https://blank.org/*"
+     ]
+   }
+ ]
 }
