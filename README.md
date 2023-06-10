@@ -21,3 +21,9 @@ exhaustive list of supported domains for this Chrome Extension:
 This weird domain is nice to develop in isolation the extension. It could be
 removed.
 
+
+## Development hours
+Track how many ours it takes to do all I want
+1. 2023-06-09: _+-6 hours (I didn't check)
+2. 2023-06-10: 9:00 - 14:40 - 5.40 hours
+2. 2023-06-11: 10:26 - [x] -  hours and 40 min

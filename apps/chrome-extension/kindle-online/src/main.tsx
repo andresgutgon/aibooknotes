@@ -6,8 +6,17 @@ import "tailwind-config/global.css"
 import App from './SyncNotes'
 import loadFont from './lib/loadFont'
 
+// TODO: Implement Google login
+// Check ChatGPT for instructions
+/* function loadGoogleAuthLib() { */
+/*   const script = document.createElement('script') */
+/*   script.src = 'https://accounts.google.com/gsi/client' */
+/*   document.head.appendChild(script) */
+/* } */
+
 // Inject font path from Chrome extension code
 loadFont()
+
 
 const app = document.createElement("div")
 app.id = 'aibooknotes'
