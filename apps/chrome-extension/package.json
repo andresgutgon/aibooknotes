@@ -13,7 +13,8 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "ui": "workspace:*"
+    "ui": "workspace:*",
+    "lucide-react": "^0.241.0"
   },
   "devDependencies": {
     "@crxjs/vite-plugin": "2.0.0-beta.17",
