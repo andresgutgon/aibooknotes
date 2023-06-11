@@ -18,12 +18,16 @@ function findParent(element: Element | null) {
   return null;
 }
 
-export const NOTES_ROOT_DOM_ID = 'kp-notebook-annotations'
-export default function extractNotesFromDom(): BaseNote[] {
-  const root = document.getElementById(NOTES_ROOT_DOM_ID)
+export function getHightlights() {
+  const root = document.getElementById('kp-notebook-annotations')
   if (!root) return []
+  return Array.from(root.querySelectorAll(`[id^=highlight-]`))
+}
 
-  return Array.from(root.querySelectorAll(`[id^=highlight-]`)).map(item => {
+export default function extractNotesFromDom(): BaseNote[] {
+  const highlights = getHightlights()
+
+  return highlights.map(item => {
     const element = item.querySelector('[id=highlight]')
     const note = element?.textContent || ''
     const parent = findParent(element)

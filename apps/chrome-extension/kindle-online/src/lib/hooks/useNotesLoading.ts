@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { getHightlights } from "../extractNotesFromDom";
 
 function findByDomId(id: string) {
   return document.getElementById(id)
@@ -11,8 +12,9 @@ const NOTES_COUNTER = 'kp-notebook-highlights-count'
 const NOTES_ALERT_SUMMARY = 'kp-notebook-hidden-annotations-summary'
 
 export default function useNotesLoading() {
-  const observerRef = useRef(null)
+  const observerRef = useRef<MutationObserver | null>(null)
   const [loading, setLoading] = useState(true)
+  const [highlightsCount, setHighlights] = useState(0)
   const [notesCropped, setNotesCropped] = useState(true)
 
   useEffect(() => {
@@ -25,8 +27,10 @@ export default function useNotesLoading() {
       }
     })
 
-    observer.observe(root, { attributes: true, childList: true, subtree: true })
-    observerRef.current = observer
+    if (root) {
+      observer.observe(root, { attributes: true, childList: true, subtree: true })
+      observerRef.current = observer
+    }
 
     return () => {
       if (observerRef.current) {
@@ -48,9 +52,9 @@ export default function useNotesLoading() {
 
       if (!isLoading) {
         const alert = findByDomId(NOTES_ALERT_SUMMARY)
-        const isCropped = !alert.classList.contains('aok-hidden')
-        console.log('aibn: isCropped', isCropped);
+        const isCropped = !alert?.classList?.contains('aok-hidden')
         setNotesCropped(isCropped)
+        setHighlights(getHightlights().length)
         clearInterval(interval)
         setLoading(false)
       }
@@ -60,6 +64,6 @@ export default function useNotesLoading() {
     return () => {
       clearInterval(interval)
     }
-  }, [loading])
-  return { loading, notesCropped }
+  }, [loading, setNotesCropped, setHighlights])
+  return { loading, notesCropped, highlightsCount }
 }
