@@ -1,9 +1,9 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 
-import "tailwind-config/global.css"
+import 'tailwind-config/global.css'
 
-import App from './SyncNotes'
+import App from './Notes'
 import loadFont from './lib/loadFont'
 
 // TODO: Implement Google login

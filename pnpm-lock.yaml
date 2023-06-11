@@ -26,6 +26,9 @@ importers:
 
   apps/chrome-extension:
     dependencies:
+      lucide-react:
+        specifier: ^0.241.0
+        version: 0.241.0(react@18.2.0)
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -3489,6 +3492,14 @@ packages:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0
     dependencies:
       react: 17.0.2
+    dev: false
+
+  /lucide-react@0.241.0(react@18.2.0):
+    resolution: {integrity: sha512-g22ci6iHuNc2hUwjiFz0D3jQQfQYrZBZesXG6+AX5rOV68Epttkt/nF6dMdz6reKJjtpoNzu+LKeKHGu/qjOgQ==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /magic-string@0.26.7:

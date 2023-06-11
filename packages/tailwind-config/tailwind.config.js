@@ -4,9 +4,8 @@ import { fontFamily } from 'tailwindcss/defaultTheme'
 module.exports = {
   darkMode: ["dark"],
   content: [
-    '../../apps/chrome-extension/kindle-online/src/**/*.{js,jsx,ts,tsx}',
-    '../../packages/ui/src/**/*.{js,jsx,ts,tsx}',
-    '../../packages/ui/src/**/*.ts',
+    '../../apps/chrome-extension/kindle-online/src/**/*.{ts,tsx}',
+    '../../packages/ui/src/**/*.{ts,tsx}'
   ],
   theme: {
     container: {
@@ -34,6 +33,10 @@ module.exports = {
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",

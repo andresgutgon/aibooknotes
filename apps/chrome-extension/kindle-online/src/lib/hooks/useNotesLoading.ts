@@ -8,10 +8,12 @@ const NOTES_ROOT_ELEMENT = 'kp-notebook-annotations-pane'
 const NOTES_SPINNER_NOTES = 'kp-notebook-annotations-spinner'
 const NOTES_SPINNER_BOOK = 'kp-notebook-spinner'
 const NOTES_COUNTER = 'kp-notebook-highlights-count'
+const NOTES_ALERT_SUMMARY = 'kp-notebook-hidden-annotations-summary'
 
 export default function useNotesLoading() {
   const observerRef = useRef(null)
   const [loading, setLoading] = useState(true)
+  const [notesCropped, setNotesCropped] = useState(true)
 
   useEffect(() => {
     if (loading) return
@@ -19,7 +21,6 @@ export default function useNotesLoading() {
     const root = findByDomId(NOTES_ROOT_ELEMENT)
     const observer = new MutationObserver((mutationsList, _observer) => {
       if (mutationsList.some(mutation => mutation.target === root)) {
-        console.log('aibn: page changed');
         setLoading(true)
       }
     })
@@ -46,6 +47,10 @@ export default function useNotesLoading() {
       const isLoading = isLoadingBook || isLoadingNotes || isLoadingCounter
 
       if (!isLoading) {
+        const alert = findByDomId(NOTES_ALERT_SUMMARY)
+        const isCropped = !alert.classList.contains('aok-hidden')
+        console.log('aibn: isCropped', isCropped);
+        setNotesCropped(isCropped)
         clearInterval(interval)
         setLoading(false)
       }
@@ -56,5 +61,5 @@ export default function useNotesLoading() {
       clearInterval(interval)
     }
   }, [loading])
-  return loading
+  return { loading, notesCropped }
 }
