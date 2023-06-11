@@ -26,4 +26,4 @@ removed.
 Track how many ours it takes to do all I want
 1. 2023-06-09: _+-6 hours (I didn't check)
 2. 2023-06-10: 9:00 - 14:40 - 5.40 hours
-2. 2023-06-11: 10:26 - [x] -  hours and 40 min
+2. 2023-06-11: 10:26 - 15:36 -  5.20 hours
