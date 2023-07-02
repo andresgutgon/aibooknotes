@@ -3,12 +3,13 @@ import GoogleLogo from "./GoogleLogo";
 
 type Props = {
   onClick: () => void
+  isLoading: boolean
 }
-export function GoogleButton({ onClick }: Props) {
+export function GoogleButton({ onClick, isLoading }: Props) {
   return (
-    <Button variant='outline' onClick={onClick}>
+    <Button isLoading={isLoading} onClick={onClick}>
       <div className='flex items-center space-x-2'>
-        <GoogleLogo />
+        {!isLoading && <GoogleLogo />}
         <div>Login with Google</div>
       </div>
     </Button>

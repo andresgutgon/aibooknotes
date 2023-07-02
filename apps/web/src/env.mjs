@@ -14,7 +14,6 @@ export const env = createEnv({
     DATABASE_HOST: z.string(),
     DATABASE_USERNAME: z.string(),
     DATABASE_PASSWORD: z.string(),
-    DATABASE_URL: z.string(),
   },
   runtimeEnv: {
     NEXTAUTH_URL: process.env.NEXTAUTH_URL,
@@ -22,7 +21,6 @@ export const env = createEnv({
     DATABASE_HOST: process.env.DATABASE_HOST,
     DATABASE_USERNAME: process.env.DATABASE_USERNAME,
     DATABASE_PASSWORD: process.env.DATABASE_PASSWORD,
-    DATABASE_URL: process.env.DATABASE_URL,
     GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
     GOOGLE_CLIENT_SECRET: process.env.GOOGLE_CLIENT_SECRET,
     OPEN_AI_API_KEY: process.env.OPEN_AI_API_KEY,

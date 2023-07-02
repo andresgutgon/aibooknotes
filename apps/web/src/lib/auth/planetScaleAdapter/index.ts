@@ -61,6 +61,7 @@ export function PlanetScaleAdapter(
         .where(eq(sessions.sessionToken, data))
         .innerJoin(users, eq(users.id, sessions.userId))
         .then((res) => res[0]) ?? null
+
       return sessionAndUser
     },
     updateUser: async (data) => {

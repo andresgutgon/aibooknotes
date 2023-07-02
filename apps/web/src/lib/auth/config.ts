@@ -7,8 +7,9 @@ import {
 import GoogleProvider from "next-auth/providers/google"
 import { env } from "@/env.mjs"
 import { db } from '@/db'
-import { PlanetScaleAdapter } from "./PlanetScaleAdapter"
+import { PlanetScaleAdapter } from "@/lib/auth/planetScaleAdapter"
 import { Adapter } from "next-auth/adapters"
+import { UserSession } from "@/lib/auth"
 
 /**
  * Google docs
@@ -18,15 +19,8 @@ import { Adapter } from "next-auth/adapters"
 
 declare module "next-auth" {
   interface Session extends DefaultSession {
-    user: {
-      id: string
-    } & DefaultSession["user"]
+    user: UserSession
   }
-
-  // interface User {
-  //   // ...other properties
-  //   // role: UserRole
-  // }
 }
 
 export const authOptions: NextAuthOptions = {
