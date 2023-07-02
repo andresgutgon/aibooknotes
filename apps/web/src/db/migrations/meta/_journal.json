@@ -1,0 +1,20 @@
+{
+  "version": "5",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1687009491137,
+      "tag": "0000_colossal_tiger_shark",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1688298642137,
+      "tag": "0001_conscious_network",
+      "breakpoints": true
+    }
+  ]
+}

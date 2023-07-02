@@ -23,7 +23,12 @@ removed.
 
 
 ## Development hours
-Track how many ours it takes to do all I want
-1. 2023-06-09: _+-6 hours (I didn't check)
-2. 2023-06-10: 9:00 - 14:40 - 5.40 hours
-2. 2023-06-11: 10:26 - 16:00 -  5.50 hours
+Track how many ours it takes to do all I want.
+- 2023-06-09: xx:xx - xx:xx - 6 hours (I didn't check)
+- 2023-06-10: 09:00 - 14:40 - 5.40 hours
+- 2023-06-11: 10:26 - 16:00 - 5.50 hours
+- 2023-06-11: 17:10 - 18:42 - 1.30 hours
+- 2023-06-17: 10:00 - 13:47 - 4.47 hours
+- 2023-06-17: 14:34 - 18:00 - 3.26 hours
+- I SPENT 2 weekend understanding and setting [Node debugging in NextJS and Nvim](https://github.com/andresgutgon/dotfiles/pull/8)
+- 2023-0x-xx: xx:xx - xx:xx - xxx hours

@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Attach",
+      "type": "pwa-node",
+      "request": "attach",
+      "processId":"${command:pickProcess}",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
