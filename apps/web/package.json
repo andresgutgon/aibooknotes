@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "ssl": "local-ssl-proxy --config ./ssl/config.json",
     "dev": "next dev",
     "dev:debug": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
@@ -17,6 +18,7 @@
     "@planetscale/database": "^1.7.0",
     "@t3-oss/env-nextjs": "^0.4.0",
     "autoprefixer": "^10.4.14",
+    "core": "workspace:*",
     "drizzle-orm": "^0.27.0",
     "eslint": "8.42.0",
     "eslint-config-next": "^13.4.1",
@@ -36,6 +38,7 @@
     "autoprefixer": "^10.4.14",
     "dotenv": "^16.3.0",
     "drizzle-kit": "^0.19.0",
+    "local-ssl-proxy": "^2.0.5",
     "postcss": "^8.4.24",
     "tailwind-config": "workspace:*",
     "tailwindcss": "^3.3.2",

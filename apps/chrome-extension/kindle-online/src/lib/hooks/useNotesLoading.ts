@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from "react";
-import { getHightlights } from "../extractNotesFromDom";
+import { useEffect, useRef, useState } from "react"
+import { getHightlights } from "@/lib/extractNotesFromDom"
 
 function findByDomId(id: string) {
   return document.getElementById(id)

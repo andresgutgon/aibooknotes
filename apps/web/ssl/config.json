@@ -1,0 +1,9 @@
+{
+  "aibooknotes": {
+    "hostname": "localhost",
+    "source": 3001,
+    "target": 3000,
+    "cert": "ssl/certificates/localhost.pem",
+    "key": "ssl/certificates/localhost-key.pem"
+  }
+}

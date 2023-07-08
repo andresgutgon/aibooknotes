@@ -2,7 +2,7 @@ import { getServerSession as getNextAuthServerSession } from "next-auth/next"
 import { authOptions } from "@/lib/auth/config"
 import { DefaultSession } from "next-auth"
 
-export type AuthSession = DefaultSession['user'] & {
+export type UserSession = DefaultSession['user'] & {
   id: string
 }
 export async function getServerSession() {
