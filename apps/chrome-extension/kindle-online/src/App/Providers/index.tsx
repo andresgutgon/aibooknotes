@@ -1,16 +1,16 @@
 import { ReactNode } from 'react'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
 
-const queryClient = new QueryClient()
-
-type Props = { children: ReactNode }
-export default function Providers({ children }: Props) {
+type Props = { children: ReactNode; queryClient: QueryClient }
+export default function Providers({ children, queryClient }: Props) {
   return (
     <QueryClientProvider client={queryClient}>
       {children}
+      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   )
 

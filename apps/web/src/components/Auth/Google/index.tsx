@@ -26,7 +26,7 @@ export function LoginButton() {
 }
 
 export function LogoutButton() {
-  const onClick = () => {
+  const onClick = async () => {
     signOut()
   }
   return <Button onClick={onClick}>Log out</Button>

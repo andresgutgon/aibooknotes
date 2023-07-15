@@ -10,6 +10,9 @@ export default defineConfig({
     react(),
     crx({ manifest }),
   ],
+  build: {
+    sourcemap: 'inline'
+  },
   resolve: {
     alias: [
       {

@@ -5,7 +5,7 @@ export type ApiErrorBody = {
 }
 
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
-export type ApiDataConfig = AnyObject | FormData
+export type ApiDataConfig = AnyObject | FormData | URLSearchParams
 export class ApiError extends Error {
   constructor(
     message: string,

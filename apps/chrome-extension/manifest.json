@@ -8,18 +8,7 @@
     "48": "public/icons/icon-48.png",
     "128": "public/icons/icon-128.png"
   },
-  "permissions": [
-    "activeTab",
-    "scripting",
-    "cookies"
-  ],
-  "host_permissions": [
-    "http://localhost:3000/*",
-    "https://*.aibooknotes.com/*"
-  ],
-  "content_security_policy": {
-    "extension_pages": "default-src 'self'"
-  },
+  "permissions": ["activeTab", "scripting"],
   "content_scripts": [
    {
      "matches": [

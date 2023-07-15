@@ -10,10 +10,11 @@ export type CurrentUser = {
 }
 
 const ME_PATH = 'me'
+export const ME_QUERY = [ME_PATH]
 
 export function useCurrentUser() {
   const { data: currentUser, ...rest } = useQuery<CurrentUser>({
-    queryKey: [ME_PATH],
+    queryKey: ME_QUERY,
     queryFn: () => api.get<CurrentUser>({ path: ME_PATH }),
     retry: false
   })

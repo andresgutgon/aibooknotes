@@ -28,7 +28,7 @@ function ImportHighlightsButton() {
       variant='default'
     >
       <div className='flex items-center space-x-2'>
-        <span>Generate AI notes</span>
+        <span>Make something</span>
         <div>
           <Wand2 className='h-4 w-4' />
         </div>
@@ -46,6 +46,8 @@ export default function Notes() {
   if (!loading && notesCropped) return <IncompleNotesAlert />
 
   return (
-    <ImportHighlightsButton />
+    <div className='flex justify-center'>
+      <ImportHighlightsButton />
+    </div>
   )
 }

@@ -35,6 +35,15 @@ export const authOptions: NextAuthOptions = {
         secure: true
       }
     },
+    csrfToken: {
+      name: `__Host-next-auth.csrf-token`,
+      options: {
+        httpOnly: true,
+        sameSite: 'none',
+        path: '/',
+        secure: true
+      }
+    },
   },
   callbacks: {
     session({ session, user }) {
