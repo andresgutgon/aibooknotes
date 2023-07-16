@@ -5,16 +5,18 @@ import GoogleAuth from '@/components/GoogleAuth'
 import Notes from './Screens/Notes'
 import Header from '@/components/Header'
 import { QueryClient } from '@tanstack/react-query'
+import AppSkeleton from '@/components/AppSkeleton'
 
 type AuthorizedProps = { children: ReactNode }
 function Authorized({ children }: AuthorizedProps) {
-  const { currentUser, isLoading } = useCurrentUser()
+  const { data: user, isLoading } = useCurrentUser()
 
-  if (isLoading || !currentUser) return <GoogleAuth isLoading={isLoading} />
+  if (isLoading) return <AppSkeleton />
+  if (!user) return <GoogleAuth />
 
   return (
     <div className='space-y-2'>
-      <Header />
+      {user && <Header />}
       {children}
     </div>
   )

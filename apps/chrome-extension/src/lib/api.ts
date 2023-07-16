@@ -2,21 +2,28 @@ import { ApiClient } from 'core'
 import { env } from '@base/env'
 
 class Api extends ApiClient {
-  async signIn() {
-    window.open(
+  async signIn(onClose: () => void) {
+    const popup = window.open(
       this.signInUrl(),
       '_blank',
       'popup=1,left=100,top=100,width=450,height=500'
     )
+    const timer = setInterval(function() {
+      if (!popup) return
+
+      if (popup.closed) {
+        clearInterval(timer);
+        onClose()
+      }
+    }, 1000)
   }
 
   async signOut() {
-    await this.post({
+    return this.post({
       path: 'auth/signout',
       headers: { contentType: 'urlencoded' },
       data: await this.authBody()
     })
-    window.location.reload()
   }
 
   private async authBody(): Promise<URLSearchParams> {

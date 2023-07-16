@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^4.29.19",
-    "@tanstack/react-query-devtools": "^4.29.19",
     "core": "workspace:*",
     "lucide-react": "^0.241.0",
     "react": "^18.2.0",
@@ -23,6 +22,7 @@
   "devDependencies": {
     "@crxjs/vite-plugin": "2.0.0-beta.17",
     "@t3-oss/env-core": "^0.6.0",
+    "@tanstack/react-query-devtools": "^4.29.19",
     "@types/node": "20.3.0",
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",

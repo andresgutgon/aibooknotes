@@ -1,12 +1,18 @@
 import { useCurrentUser } from "@base/stores/currentUser"
 import { Button } from "ui"
 import api from '@base/lib/api'
+import { useQueryClient } from "@tanstack/react-query"
 
 export default function Header() {
-  const { currentUser } = useCurrentUser()
-  const image = currentUser?.image
-  const name = currentUser?.name
-  const onClick = async () => { api.signOut() }
+  const queryClient = useQueryClient()
+  const { data: user } = useCurrentUser()
+  const image = user?.image
+  const name = user?.name
+  const onClick = async () => {
+    await api.signOut()
+    queryClient.setQueriesData([], null)
+
+  }
   return (
     <div className='flex justify-between'>
       {/* TODO: logo */}

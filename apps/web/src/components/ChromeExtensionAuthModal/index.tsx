@@ -13,8 +13,6 @@ export default async function ChromeExtensionAuthModal({ session }: Props) {
   const isLogedIn = !!session?.user
 
   useEffect(() => {
-    console.log('foooooooooooooo');
-
     if (isLogedIn) {
       router.push(SUCCESS_URL)
     } else {

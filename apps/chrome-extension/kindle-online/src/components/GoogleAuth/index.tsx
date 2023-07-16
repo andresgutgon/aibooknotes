@@ -1,10 +1,20 @@
 import api from "@base/lib/api"
+import { useState } from "react"
 import { GoogleButton } from "ui"
 
-type Props = { isLoading: boolean }
-export default function GoogleAuth({ isLoading }: Props) {
-  const onClick = async () => { api.signIn() }
+export default function GoogleAuth() {
+  const [loading, setLoading] = useState(false)
+  const onClick = async () => {
+    setLoading(true)
+    api.signIn(() => {
+      setLoading(false)
+    })
+  }
   return (
-    <GoogleButton onClick={onClick} isLoading={isLoading} disabled={isLoading} />
+    <GoogleButton
+      onClick={onClick}
+      isLoading={loading}
+      disabled={loading}
+    />
   )
 }
