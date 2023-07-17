@@ -11,7 +11,12 @@ const nextConfig = {
         hostname: 'lh3.googleusercontent.com',
       },
     ],
-  }
+  },
+  modularizeImports: {
+    "lucide-react": {
+      transform: "lucide-react/dist/esm/icons/{{kebabCase member}}",
+    },
+  },
 }
 
 module.exports = nextConfig

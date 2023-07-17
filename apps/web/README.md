@@ -1,6 +1,8 @@
 ## Wat?
 This is the NextJS app that manage book notes.
 
+### SSL development
+So in orther to pass cookies from our server to the Chrome extension content script we need to use SSL in development to set the cookie session as `sameSite=none`. More detailed explanation in [ssl/README.md](./ssl/README.md)
 
 ### Planet Scale
 I want to give a try to Planet Scale to see how it feels their free plan and

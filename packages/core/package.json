@@ -1,0 +1,14 @@
+{
+  "name": "core",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.ts",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.195",
+    "tsconfig": "workspace:*",
+    "typescript": "^4.5.2"
+  }
+}

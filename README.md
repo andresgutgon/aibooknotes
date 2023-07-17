@@ -21,7 +21,6 @@ exhaustive list of supported domains for this Chrome Extension:
 This weird domain is nice to develop in isolation the extension. It could be
 removed.
 
-
 ## Development hours
 Track how many ours it takes to do all I want.
 - 2023-06-09: xx:xx - xx:xx - 6 hours (I didn't check)
@@ -30,5 +29,15 @@ Track how many ours it takes to do all I want.
 - 2023-06-11: 17:10 - 18:42 - 1.30 hours
 - 2023-06-17: 10:00 - 13:47 - 4.47 hours
 - 2023-06-17: 14:34 - 18:00 - 3.26 hours
-- I SPENT 2 weekend understanding and setting [Node debugging in NextJS and Nvim](https://github.com/andresgutgon/dotfiles/pull/8)
-- 2023-0x-xx: xx:xx - xx:xx - xxx hours
+- `*` No directly working on this project
+- 2023-07-08: 11:30 - 13:30 - 2 hours
+- 2023-07-09: 09:00 - 10:00 - 1 hour
+- 2023-07-09: 10:40 - 14:00 - 3.40 hours
+- 2023-07-10: 19:45 - 20:15 - 0.30 hours
+- 2023-07-15: 09:16 - 14:00 - 4.45 hours
+- 2023-0x-15: 15:30 - 18:00 - 2.30 hours
+- 2023-07-16: 08:30 - 14:00 - 5.30 hours
+- 2023-0x-xx: 15:30 - 18:10 - 2.40 hours
+- 2023-0x-xx: xx:xx - xx:xx - xx.xx hours
+
+`*` I spent 2 weekend understanding and setting [Node debugging in NextJS and Nvim](https://github.com/andresgutgon/dotfiles/pull/8)

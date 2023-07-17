@@ -4,7 +4,7 @@ import { z } from "zod";
 
 export const env = createEnv({
   client: {
-    NEXTAUTH_URL: z.string()
+    NEXTAUTH_URL: z.string(),
   },
   server: {
     OPEN_AI_API_KEY: z.string().min(1),
@@ -14,9 +14,11 @@ export const env = createEnv({
     DATABASE_HOST: z.string(),
     DATABASE_USERNAME: z.string(),
     DATABASE_PASSWORD: z.string(),
+    NEXTAUTH_URL_INTERNAL: z.string(),
   },
   runtimeEnv: {
     NEXTAUTH_URL: process.env.NEXTAUTH_URL,
+    NEXTAUTH_URL_INTERNAL: process.env.NEXTAUTH_URL_INTERNAL,
     NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
     DATABASE_HOST: process.env.DATABASE_HOST,
     DATABASE_USERNAME: process.env.DATABASE_USERNAME,
