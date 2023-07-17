@@ -12,7 +12,6 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
     "plugins": [
@@ -33,5 +32,5 @@
     "**/*.mjs",
     ".next/types/**/*.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "cdk.out"]
 }

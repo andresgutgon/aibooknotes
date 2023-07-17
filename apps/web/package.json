@@ -2,6 +2,9 @@
   "name": "web",
   "version": "0.1.0",
   "private": true,
+  "bin": {
+    "aws-s3": "bin/aws-s3.js"
+  },
   "scripts": {
     "ssl": "local-ssl-proxy --config ./ssl/config.json",
     "dev": "next dev",
@@ -11,13 +14,20 @@
     "lint": "next lint",
     "db:generate": "drizzle-kit generate:mysql",
     "db:drop": "drizzle-kit drop",
-    "db:push": "drizzle-kit push:mysql"
+    "db:push": "drizzle-kit push:mysql",
+    "cdk": "cdk --profile aibooknotes",
+    "test:watch": "vitest",
+    "test:watch:debug": "vitest --inspect-brk --no-threads",
+    "test": "vitest run"
   },
   "dependencies": {
     "@auth/core": "^0.8.2",
+    "@aws-sdk/client-s3": "^3.379.1",
     "@planetscale/database": "^1.7.0",
     "@t3-oss/env-nextjs": "^0.4.0",
     "autoprefixer": "^10.4.14",
+    "aws-cdk-lib": "2.88.0",
+    "constructs": "^10.0.0",
     "core": "workspace:*",
     "drizzle-orm": "^0.27.0",
     "eslint": "8.42.0",
@@ -28,20 +38,27 @@
     "postcss": "^8.4.24",
     "react": "18.2.0",
     "react-dom": "^18.2.0",
+    "source-map-support": "^0.5.21",
     "ui": "workspace:*",
     "zod": "^3.21.4"
   },
   "devDependencies": {
+    "@aws-solutions-constructs/aws-cloudfront-s3": "^2.41.0",
     "@types/node": "20.3.0",
     "@types/react": "18.2.11",
     "@types/react-dom": "18.2.4",
     "autoprefixer": "^10.4.14",
+    "aws-cdk": "^2.88.0",
+    "aws-sdk-client-mock": "^3.0.0",
     "dotenv": "^16.3.0",
     "drizzle-kit": "^0.19.0",
     "local-ssl-proxy": "^2.0.5",
+    "nanoid": "^4.0.2",
     "postcss": "^8.4.24",
     "tailwind-config": "workspace:*",
     "tailwindcss": "^3.3.2",
-    "typescript": "^5.0.2"
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2",
+    "vitest": "^0.33.0"
   }
 }
