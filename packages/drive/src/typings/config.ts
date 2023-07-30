@@ -1,12 +1,13 @@
-import { LocalDriverConfig, LocalDriverContract } from "./typings"
+import { LocalDriverConfig, LocalDriverContract } from "./drivers"
+
 
 export interface DriversList {
   local: {
-    implementation: LocalDriverContract
+    driver: LocalDriverContract
     config: LocalDriverConfig
   }
 }
-type DriveConfig = {
+export type DriveConfig = {
   disks: {
     [name: string]: {
       [K in keyof DriversList]: DriversList[K]['config'] & { driver: K }
@@ -14,9 +15,7 @@ type DriveConfig = {
   }
 }
 
-export function driveConfig<T extends DriveConfig & { disk: keyof T['disks'] }>(config: T): T {
-  return config
-}
+export type Disk = keyof DriveConfig['disks']
 
 export type InferDisksFromConfig<T extends DriveConfig> = {
   [K in keyof T['disks']]: DriversList[T['disks'][K]['driver']]

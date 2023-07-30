@@ -1,2 +1,3 @@
 export * from './src/typings'
-export * from './src/config'
+export { PathPrefixer } from './src/PathPrefixer'
+export * from './src/Driver'

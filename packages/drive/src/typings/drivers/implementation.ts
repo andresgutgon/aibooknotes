@@ -20,36 +20,6 @@ export type DriveFileStats = {
   etag?: string
 }
 
-export interface DriveListItem<T = any> {
-  location: string
-  isFile: boolean
-  original: T
-}
-
-export interface DirectoryListingContract<Driver extends DriverContract, T>
-  extends AsyncIterable<T> {
-  driver: Driver
-
-  filter(
-    predicate: (item: T, index: number, driver: Driver) => Promise<boolean> | boolean
-  ): DirectoryListingContract<Driver, T>
-
-  map<M>(
-    mapper: (item: T, index: number, driver: Driver) => Promise<M> | M
-  ): DirectoryListingContract<Driver, M>
-
-  recursive(
-    next?: (current: T, depth: number, driver: Driver) => Promise<string | null> | string | null
-  ): DirectoryListingContract<Driver, T>
-
-  pipe<U>(
-    fn: (this: Driver, source: AsyncIterable<T>) => AsyncIterable<U>
-  ): DirectoryListingContract<Driver, U>
-
-  toIterable(): AsyncIterable<T>
-  toArray(): Promise<T[]>
-}
-
 export interface DriverContract {
   name: string
 
@@ -77,6 +47,5 @@ export interface DriverContract {
   delete(location: string): Promise<void>
   copy(source: string, destination: string, options?: WriteOptions): Promise<void>
   move(source: string, destination: string, options?: WriteOptions): Promise<void>
-  list?(location: string): DirectoryListingContract<this, DriveListItem>
 }
 

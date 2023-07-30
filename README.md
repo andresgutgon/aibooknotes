@@ -41,7 +41,8 @@ Track how many ours it takes to do all I want.
 - 2023-07-23: 14:30 - 18:00 - 3.30 hours
 - 2023-07-29: 11:00 - 14:00 - 3.00 hours
 - 2023-07-29: 15:00 - 17:00 - 2.00 hours
-- 2023-07-30: 09:xx - xx:xx - xx.xx hours
+- 2023-07-30: 09:00 - 13:40 - 3.40 hours
+- 2023-07-30: 15:00 - xx:xx - xx.xx hours
 - 2023-0x-xx: xx:xx - xx:xx - xx.xx hours
 
 `*` I spent 2 weekend understanding and setting [Node debugging in NextJS and Nvim](https://github.com/andresgutgon/dotfiles/pull/8)

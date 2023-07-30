@@ -17,3 +17,4 @@ export interface LocalDriverContract extends DriverContract {
   makePath(location: string): string
   list(location: string): DirectoryListingContract<this, LocalDriveListItem>
 }
+
