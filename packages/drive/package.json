@@ -1,12 +1,26 @@
 {
   "name": "drive",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "Drive is an abstraction on cloud storage service for NodeJS applications. Similar to Rails ActiveStorage and mostly copied from AdonisJS",
+  "main": "./index.ts",
+  "types": "./index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "drive",
+    "nodejs",
+    "activestorage"
+  ],
+  "author": "andresgutgon,virk,adonisjs",
+  "devDependencies": {
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "etag": "^1.8.1",
+    "fs-extra": "^10.1.0",
+    "memfs": "^3.4.7"
+  }
 }
