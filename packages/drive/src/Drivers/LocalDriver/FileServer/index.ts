@@ -1,6 +1,6 @@
 import { extname } from 'path'
 import { Exception } from '@poppinss/utils'
-import { LocalDriverConfig, LocalDriverContract } from '../../typings'
+import { LocalDriverConfig, LocalDriverContract } from '../../../typings'
 
 /**
  * Registers the route to serve files from the local driver
@@ -20,6 +20,7 @@ export class LocalFileServer {
   ) {
   }
 
+  // TODO: This has to be a next-filehandler
   public handler() {
     /**
      * Base path must always be defined
@@ -153,10 +154,6 @@ export class LocalFileServer {
       if (error.original?.code === 'ENOENT' || error.code === 'ENOENT') {
         response.notFound('File not found')
       } else {
-        logger.fatal(
-          error,
-          `drive: Unable to serve file "${location}" from "${this.diskName}" disk`
-        )
         response.internalServerError('Cannot process file')
       }
     }
