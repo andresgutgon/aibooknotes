@@ -26,3 +26,12 @@ Workaround for now is to change the target in your tsconfig to ESNext when you w
 }
 ```
 https://github.com/drizzle-team/drizzle-orm/issues/803
+
+## AWS CDK
+We provision stacks on AWS for uploading files for example. With AWS CDK. We
+have setup the `pnpm cdk` command to be able to make actions on the AWS if the
+IAM configured has a credentials on `~/.aws/credentials` called `aibooknotes`.
+Otherwhise it will fail.
+
+Use `pnpm cdk help` to see how to `diff`, `deploy` or `destroy` the stacks in
+the AWS platform.
