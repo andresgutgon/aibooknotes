@@ -47,6 +47,4 @@ export interface DriverContract {
   ): Promise<void>
   setVisibility(location: string, visibility: Visibility): Promise<void>
   delete(location: string): Promise<void>
-
 }
-
