@@ -6,14 +6,7 @@ import { PathTraversalDetectedException } from '../Exceptions'
  * Path prefixer for resolving and prefixing paths for disk drivers
  */
 export class PathPrefixer {
-  /**
-   * Separator used for dividing path segments is always unix-style forward slash
-   */
   public separator = '/' as const
-
-  /**
-   * Prefix used for path prefixing. Can be empty string for cloud drivers.
-   */
   public prefix: string
 
   constructor(prefix: string = '') {

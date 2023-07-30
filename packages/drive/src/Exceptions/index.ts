@@ -1,13 +1,5 @@
-/*
- * @adonisjs/drive
- *
- * (c) Harminder Virk <virk@adonisjs.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
 import { Exception } from '@poppinss/utils'
+import exceptions from './exceptions'
 
 /**
  * Unable to write file to the destination
@@ -216,6 +208,22 @@ export class PathTraversalDetectedException extends Exception {
 
     error.location = location
 
+    return error
+  }
+}
+
+export class DriveKeyException extends Exception {
+  public static missingKey(): DriveKeyException {
+    const details = exceptions['E_MISSING_SECRET_KEY']
+    const error = new this(details.message, details.status, details.code)
+    error.help = details.help.join('\n')
+    return error
+  }
+
+  public static insecureKey(): DriveKeyException {
+    const details = exceptions['E_INSECURE_SECRET_KEY']
+    const error = new this(details.message, details.status, details.code)
+    error.help = details.help.join('\n')
     return error
   }
 }
