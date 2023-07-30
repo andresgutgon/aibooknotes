@@ -1,6 +1,6 @@
 import { extname } from 'path'
 import { Exception } from '@poppinss/utils'
-import { LocalDriverConfig, LocalDriverContract } from '../typings'
+import { LocalDriverConfig, LocalDriverContract } from '../../typings'
 
 /**
  * Registers the route to serve files from the local driver

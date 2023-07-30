@@ -7,12 +7,12 @@ import {
   CannotGetMetaDataException,
   CannotReadFileException,
   CannotWriteFileException
-} from '../Exceptions'
-import { LocalFileServer } from '../LocalFileServer'
-import { PathPrefixer } from '../PathPrefixer'
+} from '../../Exceptions'
+import { LocalFileServer } from './FileServer'
+import { PathPrefixer } from './PathPrefixer'
 
-import { ContentHeaders, DriveFileStats, DriverContract, LocalDriverConfig, RouteContract, Visibility } from "../typings"
-import { pipelinePromise } from '../utils'
+import { ContentHeaders, DriveFileStats, DriverContract, LocalDriverConfig, RouteContract, Visibility } from "../../typings"
+import { pipelinePromise } from './utils'
 
 export class LocalDriver implements DriverContract {
   public name: 'local' = 'local'

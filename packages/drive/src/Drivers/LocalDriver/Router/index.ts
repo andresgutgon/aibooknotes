@@ -1,4 +1,5 @@
-import { MakeSignedUrlOptions, MakeUrlOptions, RouteContract } from "../typings";
+import { MakeSignedUrlOptions, MakeUrlOptions, RouteContract } from "../../../typings"
+import { UrlBuilder } from "../UrlBuilder"
 
 export class Router implements RouteContract {
   public makeSignedUrl(
@@ -64,5 +65,4 @@ export class Router implements RouteContract {
       prefixUrl,
     }
   }
-
 }
