@@ -1,3 +1,5 @@
+import { RouteContract } from "../route"
+
 export interface DisksList { }
 export type ContentHeaders = {
   contentType?: string
@@ -45,7 +47,6 @@ export interface DriverContract {
   ): Promise<void>
   setVisibility(location: string, visibility: Visibility): Promise<void>
   delete(location: string): Promise<void>
-  copy(source: string, destination: string, options?: WriteOptions): Promise<void>
-  move(source: string, destination: string, options?: WriteOptions): Promise<void>
+
 }
 
